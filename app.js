@@ -11,9 +11,14 @@ server.listen(port, hostname, () => {
 
 apiServer.get("/nome", (req, res)=>{
     console.log("ho ricevuto una get su nome");
-    res.send("ciao il nome del server è: node")
+    res.send("ciao il nome del server è: "+ nome);
 });
 
 apiServer.get("/", function(req, res){
     res.send("sei in home");
-})
+});
+
+apiServer.get("/index" ,(req, res) => {
+    res.sendFile("C:\Users\\ghiani.gabriele\\Desktop\\provaNode-1\\index.html");
+});
+
